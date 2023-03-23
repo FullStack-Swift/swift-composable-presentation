@@ -100,7 +100,7 @@ struct NavigationStackExampleView: View {
   let store: StoreOf<NavigationStackExample>
 
   var body: some View {
-    if #available(iOS 16, *) {
+//    if #available(iOS 16, *) {
       VStack(spacing: 0) {
         NavigationStackWithStore(store.scope(
           state: { Array($0.stack.ids) },
@@ -111,9 +111,9 @@ struct NavigationStackExampleView: View {
           } label: {
             Text("Start")
           }
-          .buttonStyle(.borderedProminent)
-          .controlSize(.large)
-          .navigationTitle("Root")
+//          .buttonStyle(.borderedProminent)
+//          .controlSize(.large)
+//          .navigationTitle("Root")
           .navigationDestination(
             forEach: store.scope(state: \.stack),
             action: NavigationStackExample.Action.destination,
@@ -145,9 +145,9 @@ struct NavigationStackExampleView: View {
           .padding()
         }
       }
-    } else {
-      Text("iOS ≥ 16 required")
-    }
+//    } else {
+//      Text("iOS ≥ 16 required")
+//    }
   }
 
   // MARK: - Child Views

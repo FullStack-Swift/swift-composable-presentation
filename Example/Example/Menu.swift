@@ -13,6 +13,7 @@ struct Menu: ReducerProtocol {
       case switchStore(SwitchStoreExample.State)
       case destination(DestinationExample.State)
       case navigationStack(NavigationStackExample.State)
+      case colorNavigationStack(ColorNavigationStackExample.State)
     }
 
     var destination: Menu.State.Destination?
@@ -28,6 +29,7 @@ struct Menu: ReducerProtocol {
       case switchStore(SwitchStoreExample.Action)
       case destination(DestinationExample.Action)
       case navigationStack(NavigationStackExample.Action)
+      case colorNavigationStack(ColorNavigationStackExample.Action)
     }
 
     case present(Menu.State.Destination?)
@@ -60,6 +62,7 @@ extension ReducerProtocolOf<Menu> {
       .presentingSwitchStoreExample()
       .presentingDestinationExample()
       .presentingNavigationStackExample()
+      .presentingColorNavigationStackExample()
   }
 
   func presentingSheetExample() -> some ReducerProtocol<State, Action> {
@@ -141,6 +144,16 @@ extension ReducerProtocolOf<Menu> {
       presented: NavigationStackExample.init
     )
   }
+  
+  func presentingColorNavigationStackExample() -> some ReducerProtocol<State, Action> {
+    presenting(
+      unwrapping: \.destination,
+      case: /State.Destination.colorNavigationStack,
+      id: .notNil(),
+      action: (/Action.destination).appending(path: /Action.Destination.colorNavigationStack),
+      presented: ColorNavigationStackExample.init
+    )
+  }
 }
 
 struct MenuView: View {
@@ -191,6 +204,11 @@ struct MenuView: View {
               state: (/Menu.State.Destination.navigationStack).extract(from:),
               action: { Menu.Action.destination(.navigationStack($0)) },
               then: NavigationStackExampleView.init(store:)
+            )
+            CaseLet(
+              state: (/Menu.State.Destination.colorNavigationStack).extract(from:),
+              action: { Menu.Action.destination(.colorNavigationStack($0)) },
+              then: ColorNavigationStackExampleView.init(store:)
             )
           }
           .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -254,10 +272,18 @@ struct MenuView: View {
             } label: {
               Text("NavigationStackExample")
             }
+            
+            Button {
+              ViewStore(store.stateless).send(.present(.colorNavigationStack(.init())))
+            } label: {
+              Text("ColorNavigationStackExample")
+            }
+
           } header: {
             Text("Examples")
           }
         }
+        .listStyle(.plain)
       }
     )
   }

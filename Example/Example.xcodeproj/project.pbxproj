@@ -21,6 +21,7 @@
 		31D7D9BA274096B6001699F4 /* ForEachStoreExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D7D9B9274096B6001699F4 /* ForEachStoreExample.swift */; };
 		31D7D9BC274099F2001699F4 /* SheetExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D7D9BB274099F2001699F4 /* SheetExample.swift */; };
 		31D7D9BE27409B99001699F4 /* FullScreenCoverExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D7D9BD27409B99001699F4 /* FullScreenCoverExample.swift */; };
+		905FF83329CC954600438F0E /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905FF83229CC954600438F0E /* ColorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		31D7D9B9274096B6001699F4 /* ForEachStoreExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachStoreExample.swift; sourceTree = "<group>"; };
 		31D7D9BB274099F2001699F4 /* SheetExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetExample.swift; sourceTree = "<group>"; };
 		31D7D9BD27409B99001699F4 /* FullScreenCoverExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCoverExample.swift; sourceTree = "<group>"; };
+		905FF83229CC954600438F0E /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				31817E672950A982000BC1C3 /* DestinationExample.swift */,
 				315A243C2963ADB900B04EAC /* NavigationStackExample.swift */,
 				31D7D9B52740909C001699F4 /* TimerExample.swift */,
+				905FF83229CC954600438F0E /* ColorView.swift */,
 				3103A61929621FA500B15453 /* Helpers.swift */,
 				3154EC0826DFD01800D69F22 /* Assets.xcassets */,
 				3154EC0D26DFD01800D69F22 /* Info.plist */,
@@ -164,6 +167,7 @@
 				31D7D9B62740909C001699F4 /* TimerExample.swift in Sources */,
 				31D7D9BE27409B99001699F4 /* FullScreenCoverExample.swift in Sources */,
 				31D7D9B42740907F001699F4 /* NavigationDestinationExample.swift in Sources */,
+				905FF83329CC954600438F0E /* ColorView.swift in Sources */,
 				3195775C27415EF100FFA9EB /* PopToRootExample.swift in Sources */,
 				31D7D9BC274099F2001699F4 /* SheetExample.swift in Sources */,
 				315A243D2963ADB900B04EAC /* NavigationStackExample.swift in Sources */,
@@ -300,8 +304,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_TEAM = VQ7XHLJJ2T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -311,7 +317,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
-				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = composable.presentation.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -325,8 +331,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_TEAM = VQ7XHLJJ2T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -336,7 +344,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
-				PRODUCT_BUNDLE_IDENTIFIER = pl.darrarski.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = composable.presentation.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -355,7 +363,7 @@
 				3154EC0F26DFD01800D69F22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		3154EC1026DFD01800D69F22 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
@@ -364,7 +372,7 @@
 				3154EC1226DFD01800D69F22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
