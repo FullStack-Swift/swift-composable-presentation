@@ -6,8 +6,8 @@ let package = Package(
   platforms: [
     .iOS(.v14),
     .macOS(.v11),
-    .tvOS(.v13),
-    .watchOS(.v6),
+    .tvOS(.v14),
+    .watchOS(.v7),
   ],
   products: [
     .library(
@@ -19,7 +19,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", .upToNextMajor(from: "0.52.0")),
-    .package(url: "https://github.com/lm/navigation-stack-backport.git", .upToNextMajor(from: "1.0.0")),
+    .package(url: "https://github.com/johnpatrickmorgan/NavigationBackport", .upToNextMajor(from: "0.7.2")),
   ],
   targets: [
     .target(
@@ -30,9 +30,8 @@ let package = Package(
           package: "swift-composable-architecture"
         ),
         .product(
-          name: "NavigationStackBackport",
-          package: "navigation-stack-backport",
-          condition: .when(platforms: [.iOS])
+          name: "NavigationBackport",
+          package: "NavigationBackport"
         ),
       ]
     ),

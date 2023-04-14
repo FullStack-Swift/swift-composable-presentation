@@ -10,12 +10,12 @@
       }
     },
     {
-      "identity" : "navigation-stack-backport",
+      "identity" : "navigationbackport",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/lm/navigation-stack-backport.git",
+      "location" : "https://github.com/johnpatrickmorgan/NavigationBackport",
       "state" : {
-        "revision" : "7641abbba79be2cc2616413e7915d5f778784ecd",
-        "version" : "1.0.0"
+        "revision" : "5096dda355148dd40162810e7f56292ce0a2b09b",
+        "version" : "0.7.5"
       }
     },
     {
